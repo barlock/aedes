@@ -39,12 +39,12 @@ jobs:
         run: |
           npm run test:ci
 
-      - name: Coveralls Parallel
-        uses: coverallsapp/github-action@master
-        with:
-          github-token: ${{ secrets.github_token }}
-          parallel: true
-          flag-name: run-${{ matrix.node-version }}-${{ matrix.os }}
+#      - name: Coveralls Parallel
+#        uses: coverallsapp/github-action@master
+#        with:
+#          github-token: ${{ secrets.github_token }}
+#          parallel: true
+#          flag-name: run-${{ matrix.node-version }}-${{ matrix.os }}
 
   coverage:
     needs: test
